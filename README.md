@@ -14,7 +14,7 @@ connection attempts to detailed interaction logs capturing more detailed informa
 
 *Level 3: All of level 1 and 2 + every request & response, all client info (geolocation, etc.)*  
 ## How to Run This Honeypot
-Our VPN honeypot is currently deployed within a Docker container environment using Docker Compose. The Docker images being run can be found here with the most recent images at the top of the list. The most suitable operating system to run our honeypot on is Linux.  
+Our VPN honeypot is currently deployed within a Docker container environment using Docker Compose. The Docker images being run can be found [here](https://hub.docker.com/r/aih12/codeplushp) with the most recent images at the top of the list. The Docker images are also immediately available here on GitHub through the attached package. The most suitable operating system to run our honeypot on is Linux.  
 First build the image with `docker compose build`
 
 Then launch the container with: `docker compose up`  
