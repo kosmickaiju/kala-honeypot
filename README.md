@@ -12,4 +12,13 @@ connection attempts to detailed interaction logs capturing more detailed informa
 
 *Level 2: All of level 1 + VPN Session, some requests with more client info, and server response*  
 
-*Level 3: All of level 1 and 2 + every request & response, all client info (geolocation, etc.)*
+*Level 3: All of level 1 and 2 + every request & response, all client info (geolocation, etc.)*  
+## How to Run This Honeypot
+Our VPN honeypot is currently deployed within a Docker container environment using Docker Compose. The Docker images being run can be found here with the most recent images at the top of the list. The most suitable operating system to run our honeypot on is Linux.  
+First build the image with `docker compose build`
+
+Then launch the container with: `docker compose up`  
+
+To stop running the honeypot, do `ctrl + c` and then `docker compose down`  
+
+Once deployed, attackers can utilize their own third-party VPN clients like WireGuard and strongSwan to establish connections with our server. Once a connection is established, our honeypot server is able to log activities and other relevant information about the attacker. These logs are integrated into our STINGAR platform, where data from various honeypots, including ours, is aggregated and accessible for analysis and monitoring.
